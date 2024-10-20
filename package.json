@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@blocknote/core": "^0.17.1",
+    "@blocknote/mantine": "^0.17.1",
+    "@blocknote/react": "^0.17.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.4",
+    "@mui/material": "^6.1.4",
+    "firebase": "^10.14.1",
+    "jotai": "^2.10.1",
+    "react-router-dom": "^6.27.0"
+  }
+}
