@@ -1,6 +1,6 @@
-import { Block, BlockNoteEditor, PartialBlock, locales, BlockNoteSchema, defaultBlockSpecs, insertOrUpdateBlock, filterSuggestionItems } from "@blocknote/core";
+import { BlockNoteEditor, PartialBlock, locales, BlockNoteSchema, defaultBlockSpecs, insertOrUpdateBlock, filterSuggestionItems } from "@blocknote/core";
 import { BlockNoteView } from "@blocknote/mantine";
-import { SuggestionMenuController, getDefaultReactSlashMenuItems, useCreateBlockNote } from "@blocknote/react";
+import { SuggestionMenuController, getDefaultReactSlashMenuItems } from "@blocknote/react";
 
 import { Container } from "@mui/material";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
