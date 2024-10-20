@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { motion, useScroll, useInView } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 const cards = [
     {
@@ -44,12 +44,13 @@ const cards = [
     },
 ];
 
+const cardWidth = 300; // ボーダーとかも含めたカードの横幅
+const cardGap = 20;
+const containerPadding = 20;
+
 // カードコンポーネント
 // どれだけ移動させるかを0~100%で指定
 export function Cards({ containerRef, transformXPercent }: { containerRef: React.RefObject<HTMLDivElement>; transformXPercent: number }) {
-    const [cardWidth, setCardWidth] = useState(300);
-    const [cardGap, setCardGap] = useState(20);
-    const [containerPadding, setContainerPadding] = useState(20);
     const [transformX, setTransformX] = useState(0);
 
     const updateTransformX = useCallback(() => {

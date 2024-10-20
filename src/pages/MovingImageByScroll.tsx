@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 
+const imageSize = 100;
+
 export function MovingImageByScroll() {
     const { scrollYProgress } = useScroll();
     const [image1Position, setImage1Position] = useState(0);
     const [image2Position, setImage2Position] = useState(0);
-    const [imageSize, setImageSize] = useState(100);
 
     const updateImage1Position = useCallback(() => {
         // - (1/2) * window.innerWidth ~ (3/2) * window.innerWidth

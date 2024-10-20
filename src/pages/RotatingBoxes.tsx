@@ -6,7 +6,7 @@ function Box(props: ThreeElements["mesh"]) {
     const meshRef = useRef<THREE.Mesh>(null!);
     const [hovered, setHover] = useState(false);
     const [active, setActive] = useState(false);
-    useFrame((_, delta) => {
+    useFrame((_, ) => {
         // useFrameを使えばアニメーションを設定できる
         // 参考: https://r3f.docs.pmnd.rs/api/hooks#useframe
         meshRef.current.rotation.x += 0.02;
@@ -19,9 +19,9 @@ function Box(props: ThreeElements["mesh"]) {
                 {...props}
                 ref={meshRef}
                 scale={active ? 1.5 : 1}
-                onClick={(event) => setActive(!active)}
-                onPointerOver={(event) => setHover(true)}
-                onPointerOut={(event) => setHover(false)}
+                onClick={() => setActive(!active)}
+                onPointerOver={() => setHover(true)}
+                onPointerOut={() => setHover(false)}
             >
                 {/* オブジェクトの形状 */}
                 <boxGeometry args={[1, 1, 1]} />
