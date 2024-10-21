@@ -67,7 +67,7 @@ export const Alert = createReactBlockSpec(
             const alertType = alertTypes.find((a) => a.value === props.block.props.type)!;
             const Icon = alertType.icon;
             return (
-                <div className={"alert"} data-alert-type={props.block.props.type}>
+                <div className={"alert"} data-alert-type={props.block.props.type} spellCheck={false}>
                     {/*Icon which opens a menu to choose the Alert type*/}
                     <Menu withinPortal={false} zIndex={999999}>
                         <Menu.Target>

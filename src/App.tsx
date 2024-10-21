@@ -102,7 +102,7 @@ const insertAlert = (editor: typeof schema.BlockNoteEditor) => ({
         });
     },
     aliases: ["alert", "notification", "emphasize", "warning", "error", "info", "success"],
-    group: "基本ブロック",
+    group: "高度なブロック",
     icon: <RiAlertFill size={18} />,
 });
 
@@ -249,7 +249,7 @@ function IndexPage() {
                                 const allItems = [
                                     ...defaultItems.slice(0, insertPosition), // 0番目からN番目のアイテムを追加
                                     insertAlert(editor), // N番目にinsertAlertを挿入
-                                    ...defaultItems.slice(insertPosition), // N番目から最後までのアイテムを追加
+                                    ...defaultItems.slice(insertPosition), // N+1番目から最後までのアイテムを追加
                                 ];
 
                                 // Log the combined items to the console
